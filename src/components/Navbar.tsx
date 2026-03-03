@@ -30,7 +30,9 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#community"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScuEPM87SV17aaDyptbTltQAhdOLmAzkejajDvliM7oLKb1-g/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-brand-pink px-5 py-2 text-sm font-semibold text-brand-dark hover:bg-brand-pink/80 transition-colors"
           >
             Join Us
@@ -69,7 +71,9 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#community"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScuEPM87SV17aaDyptbTltQAhdOLmAzkejajDvliM7oLKb1-g/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMenuOpen(false)}
             className="mt-2 block rounded-full bg-brand-pink px-5 py-2 text-center text-sm font-semibold text-brand-dark hover:bg-brand-pink/80"
           >

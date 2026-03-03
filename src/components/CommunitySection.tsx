@@ -38,7 +38,9 @@ export default function CommunitySection() {
               highlights delivered straight to your inbox.
             </p>
             <a
-              href="#"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScuEPM87SV17aaDyptbTltQAhdOLmAzkejajDvliM7oLKb1-g/viewform?usp=publish-editor"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-5 inline-block rounded-full border-2 border-white px-6 py-2 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
             >
               Subscribe

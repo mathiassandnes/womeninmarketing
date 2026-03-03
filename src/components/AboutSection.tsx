@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { founders } from "@/data/founders";
+
 export default function AboutSection() {
   return (
     <section
@@ -45,6 +48,50 @@ export default function AboutSection() {
               Advance your career with the support of a community that champions
               women.
             </p>
+          </div>
+        </div>
+
+        {/* Founders */}
+        <div className="mt-20">
+          <h3 className="font-display text-2xl text-white">
+            Meet the Founders
+          </h3>
+          <div className="mt-10 grid gap-8 sm:grid-cols-2">
+            {founders.map((founder) => (
+              <div
+                key={founder.name}
+                className="rounded-2xl border border-white/15 bg-white/10 backdrop-blur-sm p-8 text-left"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <Image
+                    src={founder.photo}
+                    alt={founder.name}
+                    width={64}
+                    height={64}
+                    className="h-16 w-16 rounded-full object-cover ring-2 ring-brand-pink"
+                  />
+                  <div>
+                    <h4 className="text-lg font-bold text-white">
+                      {founder.name}
+                    </h4>
+                    <p className="text-sm font-semibold text-brand-pink">
+                      {founder.title}
+                    </p>
+                  </div>
+                </div>
+                <p className="text-sm leading-relaxed text-white/70">
+                  {founder.bio}
+                </p>
+                <a
+                  href={founder.linkedIn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-block text-sm font-semibold text-white hover:text-brand-pink transition-colors"
+                >
+                  LinkedIn &rarr;
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </div>

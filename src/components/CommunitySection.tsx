@@ -23,7 +23,9 @@ export default function CommunitySection() {
               ask questions, and stay connected between events.
             </p>
             <a
-              href="#"
+              href="https://join.slack.com/t/theoslomarketingclub/shared_invite/zt-3ri1gay86-ZP23OhaJXWHDX4Dv3e_YJQ"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-5 inline-block rounded-full bg-white px-6 py-2 text-sm font-semibold text-brand-blue hover:bg-indigo-50 transition-colors"
             >
               Join Slack

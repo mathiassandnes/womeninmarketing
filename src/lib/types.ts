@@ -7,4 +7,5 @@ export interface Event {
   speakers: string[];
   registrationUrl: string;
   category: "Conference" | "Workshop" | "Webinar" | "Meetup" | "Panel";
+  image?: string;
 }

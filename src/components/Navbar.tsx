@@ -12,9 +12,9 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-indigo-100">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-brand-dark/90 backdrop-blur-sm border-b border-white/10">
       <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4">
-        <a href="#" className="font-display text-lg text-brand-blue">
+        <a href="#" className="font-display text-lg text-white">
           Women in Marketing
         </a>
 
@@ -24,14 +24,14 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-semibold text-brand-dark hover:text-brand-blue transition-colors"
+              className="text-sm font-semibold text-indigo-300 hover:text-white transition-colors"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#community"
-            className="rounded-full bg-brand-blue px-5 py-2 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors"
+            className="rounded-full bg-brand-pink px-5 py-2 text-sm font-semibold text-brand-dark hover:bg-brand-pink/80 transition-colors"
           >
             Join Us
           </a>
@@ -44,26 +44,26 @@ export default function Navbar() {
           aria-label="Toggle menu"
         >
           <span
-            className={`block h-0.5 w-6 bg-brand-dark transition-transform ${menuOpen ? "translate-y-2 rotate-45" : ""}`}
+            className={`block h-0.5 w-6 bg-white transition-transform ${menuOpen ? "translate-y-2 rotate-45" : ""}`}
           />
           <span
-            className={`block h-0.5 w-6 bg-brand-dark transition-opacity ${menuOpen ? "opacity-0" : ""}`}
+            className={`block h-0.5 w-6 bg-white transition-opacity ${menuOpen ? "opacity-0" : ""}`}
           />
           <span
-            className={`block h-0.5 w-6 bg-brand-dark transition-transform ${menuOpen ? "-translate-y-2 -rotate-45" : ""}`}
+            className={`block h-0.5 w-6 bg-white transition-transform ${menuOpen ? "-translate-y-2 -rotate-45" : ""}`}
           />
         </button>
       </div>
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden border-t border-indigo-100 bg-white px-6 pb-4">
+        <div className="md:hidden border-t border-white/10 bg-brand-dark px-6 pb-4">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="block py-3 text-sm font-semibold text-brand-dark hover:text-brand-blue"
+              className="block py-3 text-sm font-semibold text-indigo-300 hover:text-white"
             >
               {link.label}
             </a>
@@ -71,7 +71,7 @@ export default function Navbar() {
           <a
             href="#community"
             onClick={() => setMenuOpen(false)}
-            className="mt-2 block rounded-full bg-brand-blue px-5 py-2 text-center text-sm font-semibold text-white hover:bg-indigo-700"
+            className="mt-2 block rounded-full bg-brand-pink px-5 py-2 text-center text-sm font-semibold text-brand-dark hover:bg-brand-pink/80"
           >
             Join Us
           </a>

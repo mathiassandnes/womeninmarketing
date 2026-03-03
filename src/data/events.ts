@@ -12,6 +12,7 @@ export const events: Event[] = [
     registrationUrl:
       "https://meshcommunity.com/event/follow-the-trend-or-dont-2026",
     category: "Meetup",
+    image: "/events/follow-the-trend.webp",
   },
   {
     title: "Spill the Beans",
@@ -21,8 +22,8 @@ export const events: Event[] = [
     description:
       "Real marketing f*ckup stories over coffee. An informal gathering where we share candid accounts of campaigns that underperformed, launches that missed targets, and strategies that looked great on paper but faltered in practice.",
     speakers: [],
-    registrationUrl:
-      "https://meshcommunity.com/event/spill-the-beans-by-woman-in-marketing",
+    registrationUrl: "https://luma.com/nnvu9aqj",
     category: "Meetup",
+    image: "/events/spill-the-beans.webp",
   },
 ];

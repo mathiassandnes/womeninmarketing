@@ -12,47 +12,16 @@ export default function AboutSection() {
 
       <div className="relative mx-auto max-w-4xl text-center">
         <h2 className="font-display text-3xl text-white sm:text-4xl">
-          About the Movement
+          About the Community
         </h2>
         <p className="mt-6 text-lg leading-relaxed text-white/80">
           Women in Marketing is a growing community dedicated to closing the gap
           in marketing leadership. Whether you&apos;re just starting out or
           leading a team, this is your space to learn, share, and rise together.
         </p>
-        <div className="mt-16 grid gap-10 sm:grid-cols-3">
-          <div>
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-white text-brand-purple text-2xl font-extrabold">
-              1
-            </div>
-            <h3 className="mt-4 text-lg font-bold text-white">Connect</h3>
-            <p className="mt-2 text-sm text-white/70">
-              Find mentors, collaborators, and peers who share your passion for
-              marketing.
-            </p>
-          </div>
-          <div>
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-white text-brand-blue text-2xl font-extrabold">
-              2
-            </div>
-            <h3 className="mt-4 text-lg font-bold text-white">Learn</h3>
-            <p className="mt-2 text-sm text-white/70">
-              Attend events, workshops, and webinars led by industry leaders.
-            </p>
-          </div>
-          <div>
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-white text-brand-pink text-2xl font-extrabold">
-              3
-            </div>
-            <h3 className="mt-4 text-lg font-bold text-white">Grow</h3>
-            <p className="mt-2 text-sm text-white/70">
-              Advance your career with the support of a community that champions
-              women.
-            </p>
-          </div>
-        </div>
 
         {/* Founders */}
-        <div className="mt-20">
+        <div className="mt-16">
           <h3 className="font-display text-2xl text-white">
             Meet the Founders
           </h3>
@@ -60,36 +29,34 @@ export default function AboutSection() {
             {founders.map((founder) => (
               <div
                 key={founder.name}
-                className="rounded-2xl border border-white/15 bg-white/10 backdrop-blur-sm p-8 text-left"
+                className="rounded-2xl border border-white/15 bg-brand-dark/40 backdrop-blur-sm overflow-hidden text-left"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <Image
-                    src={founder.photo}
-                    alt={founder.name}
-                    width={64}
-                    height={64}
-                    className="h-16 w-16 rounded-full object-cover ring-2 ring-brand-pink"
-                  />
-                  <div>
-                    <h4 className="text-lg font-bold text-white">
-                      {founder.name}
-                    </h4>
-                    <p className="text-sm font-semibold text-brand-pink">
-                      {founder.title}
-                    </p>
-                  </div>
+                <Image
+                  src={founder.photo}
+                  alt={founder.name}
+                  width={400}
+                  height={400}
+                  className="w-full h-72 object-cover object-top"
+                />
+                <div className="p-6">
+                  <h4 className="text-lg font-bold text-white">
+                    {founder.name}
+                  </h4>
+                  <p className="text-sm font-semibold text-brand-pink">
+                    {founder.title}
+                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-white/90">
+                    {founder.bio}
+                  </p>
+                  <a
+                    href={founder.linkedIn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-block text-sm font-semibold text-white hover:text-brand-pink transition-colors"
+                  >
+                    LinkedIn &rarr;
+                  </a>
                 </div>
-                <p className="text-sm leading-relaxed text-white/70">
-                  {founder.bio}
-                </p>
-                <a
-                  href={founder.linkedIn}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-block text-sm font-semibold text-white hover:text-brand-pink transition-colors"
-                >
-                  LinkedIn &rarr;
-                </a>
               </div>
             ))}
           </div>

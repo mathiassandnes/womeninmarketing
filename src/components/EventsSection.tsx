@@ -46,7 +46,7 @@ export default function EventsSection() {
   const events = useMemo(
     () =>
       allEvents.filter(
-        (event) => new Date(event.date) >= new Date(new Date().toDateString())
+        (event) => new Date(event.date) > new Date(new Date().toDateString())
       ),
     []
   );

@@ -81,56 +81,58 @@ export default function EventsSection() {
             </a>
           </div>
         ) : (
-          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          <div className="mt-12 grid gap-8">
             {events.map((event) => (
               <div
                 key={event.title}
-                className="flex flex-col rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden hover:bg-white/10 transition-colors"
+                className="flex flex-col md:flex-row items-center rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden hover:bg-white/10 transition-colors gap-6"
               >
                 {event.image && (
-                  <Image
-                    src={event.image}
-                    alt={event.title}
-                    width={600}
-                    height={300}
-                    className="w-full h-48 object-cover"
-                  />
+                  <div className="md:w-96 shrink-0 p-4">
+                    <Image
+                      src={event.image}
+                      alt={event.title}
+                      width={400}
+                      height={400}
+                      className="w-full h-auto rounded-xl"
+                    />
+                  </div>
                 )}
                 <div className="p-6 flex flex-col flex-1">
-                <div className="flex flex-wrap gap-2">
-                  <span
-                    className={`rounded-full px-3 py-0.5 text-xs font-semibold ${categoryBadgeColor(event.category)}`}
-                  >
-                    {event.category}
-                  </span>
-                  <span
-                    className={`rounded-full px-3 py-0.5 text-xs font-semibold ${formatBadgeColor(event.format)}`}
-                  >
-                    {event.format}
-                  </span>
-                </div>
-                <h3 className="mt-4 text-lg font-bold text-white">
-                  {event.title}
-                </h3>
-                <p className="mt-1 text-sm text-indigo-300">
-                  {formatDate(event.date)} &middot; {event.location}
-                </p>
-                <p className="mt-3 flex-1 text-sm text-indigo-200">
-                  {event.description}
-                </p>
-                {event.speakers.length > 0 && (
-                  <p className="mt-3 text-xs text-indigo-400">
-                    Speakers: {event.speakers.join(", ")}
+                  <div className="flex flex-wrap gap-2">
+                    <span
+                      className={`rounded-full px-3 py-0.5 text-xs font-semibold ${categoryBadgeColor(event.category)}`}
+                    >
+                      {event.category}
+                    </span>
+                    <span
+                      className={`rounded-full px-3 py-0.5 text-xs font-semibold ${formatBadgeColor(event.format)}`}
+                    >
+                      {event.format}
+                    </span>
+                  </div>
+                  <h3 className="mt-4 text-lg font-bold text-white">
+                    {event.title}
+                  </h3>
+                  <p className="mt-1 text-sm text-indigo-300">
+                    {formatDate(event.date)} &middot; {event.location}
                   </p>
-                )}
-                <a
-                  href={event.registrationUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-5 inline-block rounded-full bg-brand-pink px-5 py-2 text-center text-sm font-semibold text-brand-dark hover:bg-brand-pink/80 transition-colors"
-                >
-                  Register
-                </a>
+                  <p className="mt-3 flex-1 text-sm text-indigo-200">
+                    {event.description}
+                  </p>
+                  {event.speakers.length > 0 && (
+                    <p className="mt-3 text-xs text-indigo-400">
+                      Speakers: {event.speakers.join(", ")}
+                    </p>
+                  )}
+                  <a
+                    href={event.registrationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 inline-block rounded-full bg-brand-pink px-5 py-2 text-center text-sm font-semibold text-brand-dark hover:bg-brand-pink/80 transition-colors"
+                  >
+                    Register
+                  </a>
                 </div>
               </div>
             ))}

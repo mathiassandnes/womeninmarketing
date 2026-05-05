@@ -19,7 +19,7 @@ export const events: Event[] = [
     format: "In-Person",
     location: "Mesh Youngstorget, Oslo",
     description:
-      "Feeling overwhelmed by AI tools? Join us for a hands-on session with Simon Sebergsen, co-founder of GritAI Studio, to learn practical strategies for integrating AI into your marketing workflow — what to automate, where to focus your energy, and how to use these tools to amplify your creativity.",
+      "Feeling overwhelmed by AI tools? Join us for a hands-on session with Simon Sebergsen, co-founder of GritAI Studio, to learn practical strategies for integrating AI into your marketing workflow: what to automate, where to focus your energy, and how to use these tools to amplify your creativity.",
     speakers: ["Simon Sebergsen"],
     registrationUrl: "https://luma.com/u33ndq4t",
     category: "Workshop",

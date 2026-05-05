@@ -14,7 +14,7 @@ export default function CommunitySection() {
           Join the Community
         </h2>
         <p className="mt-6 text-xl text-indigo-200">
-          Connect with women in marketing across all specialties — from social
+          Connect with women in marketing across all specialties, from social
           media and content strategy to brand management and growth marketing.
         </p>
 

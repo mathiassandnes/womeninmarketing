@@ -7,22 +7,22 @@ const services = [
   {
     title: "Brand & Positioning",
     description:
-      "Sharpen your story. We run brand audits, build messaging frameworks, and refine positioning that helps you stand out in a crowded market — so every touchpoint says exactly what you mean.",
+      "Sharpen your story. We run brand audits, build messaging frameworks, and refine positioning that helps you stand out in a crowded market, so every touchpoint says exactly what you mean.",
   },
   {
     title: "Growth & Campaigns",
     description:
-      "Drive measurable results. From end-to-end campaign strategy to paid media planning and performance reviews, we help you spend smarter and grow with intention — not vanity metrics.",
+      "Drive measurable results. From end-to-end campaign strategy to paid media planning and performance reviews, we help you spend smarter and grow with intention, not vanity metrics.",
   },
   {
     title: "Content & Social",
     description:
-      "Build an audience that converts. Editorial systems, social strategy, and content workflows your team can actually keep up with — designed around the channels and voices that matter to your brand.",
+      "Build an audience that converts. Editorial systems, social strategy, and content workflows your team can actually keep up with, designed around the channels and voices that matter to your brand.",
   },
   {
     title: "AI & Automation",
     description:
-      "Cut through the noise. We design practical AI workflows, automation strategy, and tooling that frees your team to focus on the work that matters — without losing the human craft.",
+      "Cut through the noise. We design practical AI workflows, automation strategy, and tooling that frees your team to focus on the work that matters, without losing the human craft.",
   },
 ];
 
@@ -52,7 +52,7 @@ export default function ContactSection() {
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-xl leading-relaxed text-white/80">
             Beyond the community, we help brands and teams level up through
-            hands-on consulting with us — from strategy to execution and
+            hands-on consulting with us, from strategy to execution and
             everything in between.
           </p>
         </div>
@@ -124,10 +124,10 @@ export default function ContactSection() {
             </h3>
             <p className="mt-4 max-w-md text-base leading-relaxed">
               Send us a quick note. We&apos;ll come back with a few thoughts
-              and ideas — no pitch, no commitment.
+              and ideas. No pitch, no commitment.
             </p>
             <p className="mt-5 font-display text-lg">
-              — Barbara &amp; Gabriela
+              Barbara &amp; Gabriela
             </p>
           </div>
           <a

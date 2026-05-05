@@ -10,56 +10,53 @@ export default function AboutSection() {
       <div className="absolute top-[-5%] left-[-5%] h-64 w-64 rounded-full bg-white/10 blur-3xl" />
       <div className="absolute bottom-[-10%] right-[-5%] h-80 w-80 rounded-full bg-brand-blue/20 blur-3xl" />
 
-      <div className="relative mx-auto max-w-4xl text-center">
-        <h2 className="font-display text-3xl text-white sm:text-4xl">
-          About the Community
+      <div className="relative mx-auto max-w-5xl text-center">
+        <h2 className="font-display text-4xl text-white sm:text-5xl">
+          Meet the Founders
         </h2>
-        <p className="mt-6 text-lg leading-relaxed text-white/80">
-          Women in Marketing is a growing community dedicated to closing the gap
-          in marketing leadership. Whether you&apos;re just starting out or
-          leading a team, this is your space to learn, share, and rise together.
-        </p>
 
-        {/* Founders */}
-        <div className="mt-16">
-          <h3 className="font-display text-2xl text-white">
-            Meet the Founders
-          </h3>
-          <div className="mt-10 grid gap-8 sm:grid-cols-2">
-            {founders.map((founder) => (
-              <div
-                key={founder.name}
-                className="rounded-2xl border border-white/15 bg-brand-dark/40 backdrop-blur-sm overflow-hidden text-left"
-              >
-                <Image
-                  src={founder.photo}
-                  alt={founder.name}
-                  width={400}
-                  height={400}
-                  className="w-full h-72 object-cover object-top"
-                />
-                <div className="p-6">
-                  <h4 className="text-lg font-bold text-white">
-                    {founder.name}
-                  </h4>
-                  <p className="text-sm font-semibold text-brand-pink">
-                    {founder.title}
-                  </p>
-                  <p className="mt-3 text-sm leading-relaxed text-white/90">
-                    {founder.bio}
-                  </p>
-                  <a
-                    href={founder.linkedIn}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-block text-sm font-semibold text-white hover:text-brand-pink transition-colors"
+        <div className="mt-14 grid gap-10 sm:grid-cols-2">
+          {founders.map((founder) => (
+            <div
+              key={founder.name}
+              className="rounded-2xl overflow-hidden text-left"
+            >
+              <Image
+                src={founder.photo}
+                alt={founder.name}
+                width={600}
+                height={750}
+                className="w-full aspect-[4/5] object-cover object-top"
+              />
+              <div className="mt-6 px-1">
+                <h3 className="font-display text-3xl text-white">
+                  {founder.name}
+                </h3>
+                <p className="mt-2 text-base font-bold uppercase tracking-wider text-brand-dark">
+                  {founder.title}
+                </p>
+                <p className="mt-4 text-lg leading-relaxed text-brand-dark/90">
+                  {founder.bio}
+                </p>
+                <a
+                  href={founder.linkedIn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-brand-dark px-5 py-2.5 text-sm font-bold text-white hover:bg-brand-blue transition-colors"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-4 w-4"
+                    aria-hidden
                   >
-                    LinkedIn &rarr;
-                  </a>
-                </div>
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                  Connect on LinkedIn
+                </a>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

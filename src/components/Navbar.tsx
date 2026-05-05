@@ -1,20 +1,27 @@
 "use client";
 
-import { useState } from "react";
-
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Events", href: "#events" },
-  { label: "Community", href: "#community" },
-];
+import { useMemo, useState } from "react";
+import { getUpcomingEvents } from "@/lib/upcomingEvents";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const navLinks = useMemo(() => {
+    const links = [{ label: "About", href: "#about" }];
+    if (getUpcomingEvents().length > 0) {
+      links.push({ label: "Events", href: "#events" });
+    }
+    links.push(
+      { label: "Community", href: "#community" },
+      { label: "Contact", href: "#contact" }
+    );
+    return links;
+  }, []);
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-brand-dark/90 backdrop-blur-sm border-b border-white/10">
       <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4">
-        <a href="#" className="font-display text-lg text-white">
+        <a href="#" className="font-display text-xl text-white">
           Women in Marketing
         </a>
 
@@ -24,16 +31,16 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-semibold text-indigo-300 hover:text-white transition-colors"
+              className="text-base font-semibold text-indigo-300 hover:text-white transition-colors"
             >
               {link.label}
             </a>
           ))}
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScuEPM87SV17aaDyptbTltQAhdOLmAzkejajDvliM7oLKb1-g/viewform?usp=publish-editor"
+            href="https://join.slack.com/t/theoslomarketingclub/shared_invite/zt-3ri1gay86-ZP23OhaJXWHDX4Dv3e_YJQ"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-brand-pink px-5 py-2 text-sm font-semibold text-brand-dark hover:bg-brand-pink/80 transition-colors"
+            className="rounded-full bg-brand-pink px-6 py-2.5 text-base font-semibold text-brand-dark hover:bg-brand-pink/80 transition-colors"
           >
             Join Us
           </a>
@@ -65,17 +72,17 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="block py-3 text-sm font-semibold text-indigo-300 hover:text-white"
+              className="block py-3 text-base font-semibold text-indigo-300 hover:text-white"
             >
               {link.label}
             </a>
           ))}
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScuEPM87SV17aaDyptbTltQAhdOLmAzkejajDvliM7oLKb1-g/viewform?usp=publish-editor"
+            href="https://join.slack.com/t/theoslomarketingclub/shared_invite/zt-3ri1gay86-ZP23OhaJXWHDX4Dv3e_YJQ"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMenuOpen(false)}
-            className="mt-2 block rounded-full bg-brand-pink px-5 py-2 text-center text-sm font-semibold text-brand-dark hover:bg-brand-pink/80"
+            className="mt-2 block rounded-full bg-brand-pink px-6 py-2.5 text-center text-base font-semibold text-brand-dark hover:bg-brand-pink/80"
           >
             Join Us
           </a>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function CommunitySection() {
   return (
     <section
@@ -8,17 +10,28 @@ export default function CommunitySection() {
       <div className="absolute bottom-[-5%] left-[10%] h-72 w-72 rounded-full bg-brand-purple/20 blur-3xl" />
 
       <div className="relative mx-auto max-w-4xl text-center">
-        <h2 className="font-display text-3xl text-white sm:text-4xl">
+        <h2 className="font-display text-4xl text-white sm:text-5xl">
           Join the Community
         </h2>
-        <p className="mt-6 text-lg text-indigo-200">
-          Connect with women in marketing across all specialties — from social
+        <p className="mt-6 text-xl text-indigo-200">
+          Connect with women in marketing across all specialties, from social
           media and content strategy to brand management and growth marketing.
         </p>
+
+        <div className="mt-12 overflow-hidden rounded-2xl border border-white/15 shadow-xl">
+          <Image
+            src="/community/community.jpg"
+            alt="Women in Marketing community"
+            width={1600}
+            height={1067}
+            className="w-full aspect-[3/2] object-cover"
+          />
+        </div>
+
         <div className="mt-12 grid gap-8 sm:grid-cols-2">
           <div className="rounded-2xl border border-white/15 bg-white/10 backdrop-blur-sm p-8 text-left">
-            <h3 className="text-lg font-bold text-white">Slack Community</h3>
-            <p className="mt-3 text-sm text-indigo-200">
+            <h3 className="text-xl font-bold text-white">Slack Community</h3>
+            <p className="mt-3 text-base text-indigo-200">
               Join our Slack workspace to chat with peers, share opportunities,
               ask questions, and stay connected between events.
             </p>
@@ -26,14 +39,14 @@ export default function CommunitySection() {
               href="https://join.slack.com/t/theoslomarketingclub/shared_invite/zt-3ri1gay86-ZP23OhaJXWHDX4Dv3e_YJQ"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 inline-block rounded-full bg-white px-6 py-2 text-sm font-semibold text-brand-blue hover:bg-indigo-50 transition-colors"
+              className="mt-5 inline-block rounded-full bg-white px-7 py-2.5 text-base font-semibold text-brand-blue hover:bg-indigo-50 transition-colors"
             >
               Join Slack
             </a>
           </div>
           <div className="rounded-2xl border border-white/15 bg-white/10 backdrop-blur-sm p-8 text-left">
-            <h3 className="text-lg font-bold text-white">Stay Updated</h3>
-            <p className="mt-3 text-sm text-indigo-200">
+            <h3 className="text-xl font-bold text-white">Stay Updated</h3>
+            <p className="mt-3 text-base text-indigo-200">
               Get notified about upcoming events, new resources, and community
               highlights delivered straight to your inbox.
             </p>
@@ -41,7 +54,7 @@ export default function CommunitySection() {
               href="https://docs.google.com/forms/d/e/1FAIpQLScuEPM87SV17aaDyptbTltQAhdOLmAzkejajDvliM7oLKb1-g/viewform?usp=publish-editor"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 inline-block rounded-full border-2 border-white px-6 py-2 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+              className="mt-5 inline-block rounded-full border-2 border-white px-7 py-2.5 text-base font-semibold text-white hover:bg-white/10 transition-colors"
             >
               Subscribe
             </a>

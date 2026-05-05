@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
 import EventsSection from "@/components/EventsSection";
 import CommunitySection from "@/components/CommunitySection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import BackgroundIllustrations from "@/components/BackgroundIllustrations";
 
@@ -16,6 +17,7 @@ export default function Home() {
         <AboutSection />
         <EventsSection />
         <CommunitySection />
+        <ContactSection />
         <Footer />
       </div>
     </>

@@ -15,11 +15,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Women in Marketing — Connect, Collaborate, Grow",
+  title: "Women in Marketing | Connect, Collaborate, Grow",
   description:
     "A community where women in marketing at every career stage connect, collaborate, and grow together.",
   openGraph: {
-    title: "Women in Marketing — Connect, Collaborate, Grow",
+    title: "Women in Marketing | Connect, Collaborate, Grow",
     description:
       "A community where women in marketing at every career stage connect, collaborate, and grow together.",
     images: [

@@ -25,4 +25,16 @@ export const events: Event[] = [
     category: "Workshop",
     image: "/events/women-in-marketing-x-grit-ai.jpg",
   },
+  {
+    title: "The Human Algorithm: How to Get Found & Trusted in the Age of AI",
+    date: "2026-10-22",
+    format: "In-Person",
+    location: "Mesh Nationaltheatret, Oslo",
+    description:
+      "A breakfast morning as part of Oslo Innovation Week 2026, exploring how to use AI strategically, build a stronger personal brand, and become more visible in the new AI search landscape.",
+    speakers: ["Gabriela Staccioli Aguiló", "Barbara Casique"],
+    registrationUrl: "https://luma.com/muo425uc",
+    category: "Workshop",
+    image: "/events/human-algorithm.jpg",
+  },
 ];

@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# womeninmarketing.no
 
-## Getting Started
+The website for the Women in Marketing community in Norway. You update it by talking to Claude; no coding needed.
 
-First, run the development server:
+## First time on a new computer
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Install the **Claude desktop app** and sign in.
+2. Open the **Code** tab and choose this project folder (or give Claude the repo link: `https://github.com/mathiassandnes/womeninmarketing.git`).
+3. Say: **"Set up this project for me."** Claude will check what's missing and walk you through it. You may need to:
+   - install Node.js from https://nodejs.org (the "LTS" version),
+   - log in to GitHub (Mathias must add your GitHub account to the project first).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Everyday use
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Just tell Claude what you want, for example:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- "Add an event": paste the Luma link and drop in the event image
+- "Change the text in the About section to …"
+- "Replace Barbara's photo with this one"
+- "Update the Slack invite link"
+- "Show me a preview"
+- **"Publish"**: makes your changes live on womeninmarketing.no (takes about 2 minutes)
+- **"Undo that"** / "Put the site back to how it was yesterday"
 
-## Learn More
+Claude will always show you a summary and ask before anything goes live.
 
-To learn more about Next.js, take a look at the following resources:
+## If something goes wrong
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Nothing is ever lost. Every published version of the site is saved, and Claude can undo any change. If Claude gets stuck or something looks broken, contact Mathias.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*For developers:* Next.js 16 + Tailwind v4 static export, deployed to GitHub Pages via GitHub Actions on push to `main`. See [CLAUDE.md](CLAUDE.md) for structure and conventions.

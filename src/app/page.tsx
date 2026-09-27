@@ -6,8 +6,11 @@ import CommunitySection from "@/components/CommunitySection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import BackgroundIllustrations from "@/components/BackgroundIllustrations";
+import { validateContent } from "@/lib/validateContent";
 
 export default function Home() {
+  validateContent();
+
   return (
     <>
       <BackgroundIllustrations />

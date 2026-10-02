@@ -37,4 +37,28 @@ export const events: Event[] = [
     category: "Workshop",
     image: "/events/human-algorithm.jpg",
   },
+  {
+    title: "Workshop: Claude for Marketers, From Scratch",
+    date: "2026-10-31",
+    format: "In-Person",
+    location: "Mesh Nationaltheatret, Oslo",
+    description:
+      "A hands-on workshop for marketers who are new to Claude. Learn the fundamentals, how to write effective prompts and how to build your own Claude Projects, then practise on real LinkedIn posts, emails and campaign materials. Limited to 12 participants.",
+    speakers: ["Barbara Casique", "Gabriela Staccioli Aguiló"],
+    registrationUrl: "https://luma.com/yjs5iu15",
+    category: "Workshop",
+    image: "/events/claude-for-marketers-from-scratch.jpg",
+  },
+  {
+    title: "Workshop: Build Your Marketing System with Claude",
+    date: "2026-11-04",
+    format: "In-Person",
+    location: "Mesh Nationaltheatret, Oslo",
+    description:
+      "For marketers already using Claude. Map your monthly marketing tasks, match them to Claude features like Projects, connectors, Skills and scheduled tasks, and leave with one complete workflow built and running.",
+    speakers: ["Barbara Casique", "Gabriela Staccioli Aguiló"],
+    registrationUrl: "https://luma.com/a092xdvs",
+    category: "Workshop",
+    image: "/events/build-your-marketing-system-with-claude.jpg",
+  },
 ];

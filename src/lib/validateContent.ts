@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { events } from "@/data/events";
 import { founders } from "@/data/founders";
+import { workshops } from "@/data/workshops";
 
 // Runs at build time. Fails the build with a readable message if content is
 // malformed, so a typo never reaches the live site.
@@ -26,6 +27,12 @@ export function validateContent() {
     }
     if (event.image && !imageExists(event.image)) {
       problems.push(`${label}: image "${event.image}" not found in public/.`);
+    }
+  }
+
+  for (const workshop of workshops) {
+    if (!events.some((event) => event.slug === workshop.slug)) {
+      problems.push(`Workshop "${workshop.slug}": no event in events.ts has slug "${workshop.slug}".`);
     }
   }
 

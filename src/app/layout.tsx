@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { Climate_Crisis, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-
-const climateCrisis = Climate_Crisis({
-  variable: "--font-climate-crisis",
-  subsets: ["latin"],
-  weight: ["400"],
-});
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700", "800"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -44,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${climateCrisis.variable} ${inter.variable} font-body antialiased`}
+        className={`${inter.variable} font-body antialiased`}
       >
         {children}
       </body>

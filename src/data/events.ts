@@ -35,6 +35,7 @@ export const events: Event[] = [
     speakers: ["Gabriela Staccioli Aguiló", "Barbara Casique"],
     registrationUrl: "https://luma.com/muo425uc",
     category: "Workshop",
+    tags: ["Oslo Innovation Week"],
     image: "/events/human-algorithm.jpg",
   },
   {
@@ -47,6 +48,8 @@ export const events: Event[] = [
     speakers: ["Barbara Casique", "Gabriela Staccioli Aguiló"],
     registrationUrl: "https://luma.com/yjs5iu15",
     category: "Workshop",
+    tags: ["Paid"],
+    slug: "claude-for-marketers-from-scratch",
     image: "/events/claude-for-marketers-from-scratch.jpg",
   },
   {
@@ -59,6 +62,8 @@ export const events: Event[] = [
     speakers: ["Barbara Casique", "Gabriela Staccioli Aguiló"],
     registrationUrl: "https://luma.com/a092xdvs",
     category: "Workshop",
+    tags: ["Paid"],
+    slug: "build-your-marketing-system-with-claude",
     image: "/events/build-your-marketing-system-with-claude.jpg",
   },
 ];

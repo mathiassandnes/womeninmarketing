@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import SectionHeading from "@/components/SectionHeading";
 
 const services = [
   {
@@ -42,14 +43,16 @@ export default function ContactSection() {
       id="contact"
       className="scroll-mt-20 bg-brand-dark py-24 px-6 relative overflow-hidden"
     >
-      <div className="absolute top-[10%] left-[-5%] h-72 w-72 rounded-full bg-brand-pink/15 blur-3xl" />
-      <div className="absolute bottom-[-5%] right-[-5%] h-80 w-80 rounded-full bg-brand-purple/20 blur-3xl" />
+      <div className="absolute top-[8%] -left-24 h-80 w-80 rounded-full bg-brand-pink/30 blur-3xl" />
+      <div className="absolute top-[45%] -right-32 h-[30rem] w-[30rem] rounded-full bg-brand-blue/40 blur-3xl" />
 
       <div className="relative mx-auto max-w-5xl">
         <div className="text-center">
-          <h2 className="font-display text-4xl text-white sm:text-5xl">
-            Need Marketing Expertise?
-          </h2>
+          <SectionHeading
+            label="Consulting"
+            title="Need marketing expertise?"
+            highlight="We can help."
+          />
           <p className="mx-auto mt-6 max-w-2xl text-xl leading-relaxed text-white/80">
             Beyond the community, we help brands and teams level up through
             hands-on consulting with us, from strategy to execution and
@@ -116,7 +119,7 @@ export default function ContactSection() {
 
         <div className="mt-12 rounded-3xl bg-brand-pink p-10 sm:p-14 flex flex-col gap-8 md:flex-row md:items-center md:justify-between text-brand-dark shadow-2xl shadow-brand-pink/20">
           <div className="text-left flex-1">
-            <p className="text-sm font-bold uppercase tracking-[0.2em]">
+            <p className="text-sm font-bold uppercase tracking-[0.22em]">
               Let&apos;s talk
             </p>
             <h3 className="mt-3 font-display text-3xl leading-tight sm:text-4xl">

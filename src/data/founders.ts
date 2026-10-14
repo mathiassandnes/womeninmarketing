@@ -10,14 +10,14 @@ export const founders: Founder[] = [
   {
     name: "Barbara Casique",
     title: "Digital Marketing Strategist",
-    bio: "Barbara is a Digital Marketing Strategist based in Norway, specializing in performance marketing, digital growth, and strategic positioning. With a strong focus on clarity and long-term impact, she helps brands move beyond noise and make intentional, data-driven decisions. Her work sits at the intersection of strategy and community. She believes marketing is not about following every emerging trend, but about understanding people, building trust, and creating sustainable growth.",
+    bio: "Barbara is a digital marketing strategist based in Norway. She works with performance marketing, digital growth and brand positioning, helping brands cut through the noise and make clear decisions backed by data. For Barbara, marketing isn't about chasing every new trend. It's about understanding people, building trust and growing in a way that lasts.",
     photo: "/founders/barbara.jpg",
     linkedIn: "https://www.linkedin.com/in/barbara-casique-021048101",
   },
   {
     name: "Gabriela Staccioli",
     title: "Social Media Marketing Professional",
-    bio: "Gabriela is a Social Media Marketing professional with over 5 years of experience, specializing in storytelling, community building, and event marketing. Passionate about creating meaningful brand narratives that connect emotionally with people, she focuses on transforming ideas into stories and stories into communities, designing both digital and in-person experiences where audiences feel engaged, represented, and part of something bigger.",
+    bio: "Gabriela is a social media marketer based in Norway, with more than 5 years of experience in storytelling, community building and event marketing. She loves turning ideas into stories, and stories into communities. Online and in person, she creates experiences where people feel seen, included and part of something bigger.",
     photo: "/founders/gabriela.jpg",
     linkedIn: "https://www.linkedin.com/in/gabrielastaccioli",
   },

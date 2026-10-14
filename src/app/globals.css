@@ -4,6 +4,7 @@
   --background: #ffffff;
   --foreground: #1e1b4b;
   --brand-blue: #4f46e5;
+  --brand-indigo: #4338ca;
   --brand-purple: #c084fc;
   --brand-pink: #f0abfc;
   --brand-dark: #1e1b4b;
@@ -13,13 +14,16 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-brand-blue: var(--brand-blue);
+  --color-brand-indigo: var(--brand-indigo);
   --color-brand-purple: var(--brand-purple);
   --color-brand-pink: var(--brand-pink);
   --color-brand-dark: var(--brand-dark);
-  --font-display: var(--font-climate-crisis), sans-serif;
+  --font-display: var(--font-inter), sans-serif;
   --font-body: var(--font-inter), sans-serif;
 }
 
 .font-display {
-  font-family: var(--font-climate-crisis), sans-serif;
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }

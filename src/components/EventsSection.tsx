@@ -2,7 +2,9 @@
 
 import { useMemo } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { getUpcomingEvents } from "@/lib/upcomingEvents";
+import SectionHeading from "@/components/SectionHeading";
 
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString("en-US", {
@@ -15,52 +17,86 @@ function formatDate(dateStr: string) {
 function formatBadgeColor(format: string) {
   switch (format) {
     case "Virtual":
-      return "bg-brand-blue/30 text-white";
+      return "bg-white/15 border border-white/50 text-white";
     case "In-Person":
-      return "bg-brand-purple/40 text-white";
+      return "bg-white/15 border border-white/50 text-white";
     case "Hybrid":
-      return "bg-brand-pink/30 text-white";
+      return "bg-white/15 border border-white/50 text-white";
     default:
-      return "bg-white/20 text-white";
+      return "bg-white/15 border border-white/50 text-white";
   }
 }
 
 function categoryBadgeColor(category: string) {
   switch (category) {
     case "Conference":
-      return "bg-brand-blue/30 text-white";
+      return "bg-white/15 border border-white/50 text-white";
     case "Workshop":
-      return "bg-brand-purple/30 text-white";
+      return "bg-white/15 border border-white/50 text-white";
     case "Webinar":
-      return "bg-brand-pink/30 text-white";
+      return "bg-white/15 border border-white/50 text-white";
     case "Meetup":
-      return "bg-white/15 text-white";
+      return "bg-white/15 border border-white/50 text-white";
     case "Panel":
-      return "bg-violet-500/30 text-white";
+      return "bg-white/15 border border-white/50 text-white";
     default:
-      return "bg-white/20 text-white";
+      return "bg-white/15 border border-white/50 text-white";
   }
 }
 
-export default function EventsSection() {
-  const events = useMemo(() => getUpcomingEvents(), []);
+export default function EventsSection({
+  paidOnly = false,
+  label = "What's on",
+  title = "Upcoming events",
+  intro = "Events, workshops and talks to learn, connect and grow together.",
+  emptyText,
+}: {
+  paidOnly?: boolean;
+  label?: string;
+  title?: string;
+  intro?: string;
+  // When set, shows this message instead of hiding the section when empty
+  emptyText?: string;
+}) {
+  const events = useMemo(
+    () =>
+      getUpcomingEvents().filter(
+        (event) => !paidOnly || event.tags?.includes("Paid")
+      ),
+    [paidOnly]
+  );
 
-  if (events.length === 0) {
+  if (events.length === 0 && !emptyText) {
     return null;
   }
 
   return (
     <section
-      id="events"
+      id={paidOnly ? "workshops" : "events"}
       className="scroll-mt-20 bg-brand-dark py-24 px-6 relative overflow-hidden"
     >
-      <div className="absolute top-[10%] right-[-3%] h-72 w-72 rounded-full bg-brand-purple/10 blur-3xl" />
-      <div className="absolute bottom-[5%] left-[-3%] h-64 w-64 rounded-full bg-brand-blue/10 blur-3xl" />
+      <div className="absolute -top-20 -right-20 h-[28rem] w-[28rem] rounded-full bg-brand-blue/40 blur-3xl" />
+      <div className="absolute bottom-[10%] -left-24 h-64 w-64 rounded-full bg-brand-pink/30 blur-3xl" />
 
       <div className="relative mx-auto max-w-5xl">
-        <h2 className="text-center font-display text-4xl text-white sm:text-5xl">
-          Upcoming Events
-        </h2>
+        <SectionHeading label={label} title={title} />
+        <p className="mx-auto mt-6 max-w-2xl text-center text-xl leading-relaxed text-white/80">
+          {intro}
+        </p>
+
+        {events.length === 0 && (
+          <div className="mx-auto mt-12 max-w-2xl rounded-2xl border border-white/15 bg-white/5 p-10 text-center">
+            <p className="text-lg text-white/80">{emptyText}</p>
+            <a
+              href="https://luma.com/womeninmarketing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-block rounded-full bg-brand-pink px-7 py-2.5 text-base font-bold text-brand-dark hover:bg-brand-pink/80 transition-colors"
+            >
+              Follow us on Luma
+            </a>
+          </div>
+        )}
 
         <div className="mt-12 grid gap-8">
           {events.map((event) => (
@@ -91,6 +127,14 @@ export default function EventsSection() {
                   >
                     {event.format}
                   </span>
+                  {event.tags?.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-white/50 bg-white/15 px-3.5 py-1 text-sm font-semibold text-white"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
                 <h3 className="mt-4 text-xl font-bold text-white">
                   {event.title}
@@ -106,14 +150,24 @@ export default function EventsSection() {
                     Speakers: {event.speakers.join(", ")}
                   </p>
                 )}
-                <a
-                  href={event.registrationUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-5 inline-block rounded-full bg-brand-pink px-6 py-2.5 text-center text-base font-semibold text-brand-dark hover:bg-brand-pink/80 transition-colors"
-                >
-                  Register
-                </a>
+                <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                  <a
+                    href={event.registrationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 rounded-full bg-brand-pink px-6 py-2.5 text-center text-base font-bold text-brand-dark hover:bg-brand-pink/80 transition-colors"
+                  >
+                    Register
+                  </a>
+                  {event.slug && (
+                    <Link
+                      href={`/workshops/${event.slug}`}
+                      className="rounded-full border-[1.5px] border-white px-6 py-2.5 text-center text-base font-bold text-white hover:bg-white/10 transition-colors"
+                    >
+                      Read more
+                    </Link>
+                  )}
+                </div>
               </div>
             </div>
           ))}
